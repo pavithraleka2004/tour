@@ -1,0 +1,506 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* HEADER */
+.header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 40px;
+    height:90px;
+    background:#f4f4f4;
+}
+
+/* Logo Shape */
+.logo-area{
+    position:relative;
+}
+
+.logo-shape{
+    background:#2bb3c0;
+    padding:20px 60px 20px 30px;
+    border-top-right-radius:80px;
+    border-bottom-right-radius:80px;
+    color:#fff;
+}
+
+.logo-text h2{
+    font-size:26px;
+}
+
+.logo-text span{
+    font-size:14px;
+}
+
+/* Navbar */
+.navbar ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+.navbar ul li{
+    cursor:pointer;
+    position:relative;
+    padding:5px 0;
+    transition:0.3s;
+}
+
+/* Hover Underline Animation */
+.navbar ul li::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-5px;
+    width:0%;
+    height:2px;
+    background:#2bb3c0;
+    transition:0.4s;
+}
+
+.navbar ul li:hover::after,
+.navbar ul li.active::after{
+    width:100%;
+}
+
+.navbar ul li:hover{
+    color:#2bb3c0;
+}
+
+/* Book Button */
+.book-btn{
+    background:#0f3f44;
+    color:#fff;
+    padding:15px 35px;
+    border-radius:40px;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.book-btn:hover{
+    background:#2bb3c0;
+    transform:translateY(-3px);
+}
+
+/* HERO SECTION */
+.hero{
+    position:relative;
+    height:400px;
+    background:url("https://html.themehour.net/tourm/demo/assets/img/bg/breadcumb-bg.jpg") no-repeat center center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* Dark Overlay */
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+}
+
+/* Hero Content */
+.hero-content{
+    position:relative;
+    text-align:center;
+    color:#fff;
+    animation:fadeUp 1.2s ease forwards;
+}
+
+.hero-content h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    font-size:18px;
+}
+
+/* Text Animation */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.main-section{
+    padding:50px;
+}
+
+.container{
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    gap:40px;
+}
+
+/* TOUR GRID */
+.tour-grid{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:30px;
+}
+
+.tour-card{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,0.05);
+    transition:0.4s;
+}
+
+.tour-card:hover{
+    transform:translateY(-8px);
+}
+
+.tour-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.tour-content{
+    padding:20px;
+}
+
+.rating{
+    color:#ff7a00;
+    margin:10px 0;
+}
+
+.rating span{
+    color:#555;
+    margin-left:10px;
+}
+
+.tour-content h2{
+    margin:10px 0;
+}
+
+.tour-content h2 span{
+    font-size:14px;
+    color:#777;
+}
+
+.card-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:15px;
+}
+
+.card-bottom button{
+    background:#fff;
+    border:1px solid #ddd;
+    padding:8px 18px;
+    border-radius:25px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card-bottom button:hover{
+    background:#0f3f44;
+    color:#fff;
+}
+
+/* SIDEBAR */
+.sidebar-box{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:30px;
+}
+
+.sidebar-box h3{
+    margin-bottom:20px;
+}
+
+.category-list{
+    list-style:none;
+}
+
+.category-list li{
+    display:flex;
+    justify-content:space-between;
+    padding:12px 0;
+    border-bottom:1px solid #eee;
+    cursor:pointer;
+}
+
+.post{
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.post img{
+    width:70px;
+    height:70px;
+    border-radius:10px;
+    object-fit:cover;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.tags span{
+    background:#eef3f6;
+    padding:8px 14px;
+    border-radius:20px;
+    font-size:14px;
+    cursor:pointer;
+}
+
+.help-box{
+    background:url("https://html.themehour.net/tourm/demo/assets/img/bg/widget_bg_1.jpg") center/cover;
+    padding:40px 20px;
+    color:#fff;
+    border-radius:20px;
+    text-align:center;
+}
+
+.help-box button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    border-radius:25px;
+    background:#fff;
+    cursor:pointer;
+}
+
+.scroll-top{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    background:#2bb3c0;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+
+.footer{
+    background:#0f3f44;
+    padding:60px 80px;
+    color:#fff;
+    position:relative;
+}
+
+/* Newsletter */
+.newsletter{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.newsletter h2{
+    font-size:42px;
+    font-weight:600;
+    line-height:1.2;
+}
+
+.newsletter-form{
+    display:flex;
+    gap:20px;
+}
+
+.newsletter-form input{
+    padding:18px 25px;
+    width:400px;
+    border-radius:40px;
+    border:1px solid #7fcad1;
+    background:transparent;
+    color:#fff;
+    outline:none;
+}
+
+.newsletter-form button{
+    padding:18px 30px;
+    border:none;
+    border-radius:40px;
+    background:#2bb3c0;
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.newsletter-form button:hover{
+    background:#1a9aa6;
+}
+
+.divider{
+    height:1px;
+    background:#1d5c62;
+    margin:50px 0;
+}
+
+/* Footer Grid */
+.footer-container{
+    display:grid;
+    grid-template-columns: 1.3fr 1fr 1.2fr 1.3fr;
+    gap:50px;
+}
+
+/* Logo */
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.logo i{
+    font-size:32px;
+}
+
+.logo h3{
+    font-size:24px;
+}
+
+.logo span{
+    font-size:14px;
+    color:#9ed3d8;
+}
+
+.footer-col p{
+    color:#cde8eb;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+/* Social */
+.social-icons{
+    display:flex;
+    gap:15px;
+}
+
+.social-icons i{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    background:#184f55;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.social-icons i:hover{
+    background:#2bb3c0;
+}
+
+/* Quick Links */
+.footer-col h4{
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.footer-col ul{
+    list-style:none;
+}
+
+.footer-col ul li{
+    margin-bottom:12px;
+    cursor:pointer;
+    color:#cde8eb;
+    transition:0.3s;
+}
+
+.footer-col ul li i{
+    margin-right:8px;
+}
+
+.footer-col ul li:hover{
+    color:#2bb3c0;
+}
+
+/* Contact */
+.contact{
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.contact i{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#184f55;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* Instagram */
+.insta-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:10px;
+}
+
+.insta-grid img{
+    width:100%;
+    height:80px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+/* Top Button */
+.top-btn{
+    position:absolute;
+    right:30px;
+    bottom:30px;
+    width:50px;
+    height:50px;
+    background:#2bb3c0;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    text-decoration:none;
+}
+
+header .logo{
+    color:#fff;
+    font-size:22px;
+    font-weight:600;
+}
+
+header nav a{
+    color:#000;
+    text-decoration:none;
+    margin-left:25px;
+    font-size:14px;
+    transition:0.3s;
+}
+
+header nav a:hover{
+    color:#00c3ff;
+}
