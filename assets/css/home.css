@@ -6,7 +6,7 @@
 }
 
 header {
-    background: rgba(0, 0, 0, 0.6);
+    background: white;
     padding: 15px 50px;
 }
 
@@ -21,13 +21,13 @@ header {
     display: flex;
     list-style: none;
     gap: 25px;
-    color: white;
+    color: black;
     font-size: 15px;
 }
 
 .nav-left a,.nav-right a {
     text-decoration: none;
-    color: #fff;
+    color: black;
     font-size: 14px;
 }
 
